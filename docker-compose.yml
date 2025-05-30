@@ -1,5 +1,6 @@
 services:
   coolify:
+    image: coollabsio/coolify           # ✅ Add this line
     container_name: coolify
     restart: always
     working_dir: /var/www/html
@@ -27,7 +28,7 @@ services:
       - coolify
 
   soketi:
-    image: quay.io/soketi/soketi:latest   # ✅ ADDED THIS LINE
+    image: quay.io/soketi/soketi:latest
     container_name: coolify-realtime
     restart: always
     extra_hosts:
